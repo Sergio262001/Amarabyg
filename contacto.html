@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto – Amara by G</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="img/AmarabyG.png" alt="Amara by G"></a>
+        <div class="nav-links">
+            <a href="index.html" class="es">Inicio</a><a href="index.html" class="en" style="display:none;">Home</a>
+            <a href="sobre-mi.html" class="es">Sobre Mí</a><a href="sobre-mi.html" class="en" style="display:none;">About</a>
+            <a href="servicios.html" class="es">Servicios</a><a href="servicios.html" class="en" style="display:none;">Services</a>
+            <a href="sesiones.html" class="es">Sesiones</a><a href="sesiones.html" class="en" style="display:none;">Sessions</a>
+            <a href="testimonios.html" class="es">Testimonios</a><a href="testimonios.html" class="en" style="display:none;">Testimonials</a>
+            <a href="contacto.html" class="es active">Contacto</a><a href="contacto.html" class="en active" style="display:none;">Contact</a>
+        </div>
+        <div id="language-switch-nav">
+            <button onclick="setLanguage('es')">ES</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+    </nav>
+
+    <section id="contact-page" class="bg-light-image" style="background-image: url('fondo_atmosferico_sesiones_1777437935828.png'); padding-top: 150px;">
+        <h2 class="es">Conectemos</h2>
+        <h2 class="en" style="display:none;">Let's Connect</h2>
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <form>
+                <input type="text" placeholder="Nombre / Name" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ddd;">
+                <input type="email" placeholder="Email" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ddd;">
+                <textarea rows="5" placeholder="Tu mensaje / Your message" style="width:100%; padding:15px; margin-bottom:15px; border-radius:10px; border:1px solid #ddd;"></textarea>
+                <button type="submit" class="boton es">Enviar Mensaje</button>
+                <button type="submit" class="boton en" style="display:none;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><img src="img/AmarabyG.png" alt="Amara by G"></a>
+                <p class="es">Donde la calma se vuelve energía. Un espacio para tu sanación profunda y equilibrio espiritual.</p>
+                <p class="en" style="display:none;">Where calm becomes energy. A space for your deep healing and spiritual balance.</p>
+            </div>
+            <div class="footer-column">
+                <h4 class="es">Explorar</h4>
+                <h4 class="en" style="display:none;">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="sobre-mi.html" class="es">Sobre Mí</a><a href="sobre-mi.html" class="en" style="display:none;">About Me</a></li>
+                    <li><a href="servicios.html" class="es">Servicios</a><a href="servicios.html" class="en" style="display:none;">Services</a></li>
+                    <li><a href="sesiones.html" class="es">Sesiones</a><a href="sesiones.html" class="en" style="display:none;">Sessions</a></li>
+                    <li><a href="testimonios.html" class="es">Testimonios</a><a href="testimonios.html" class="en" style="display:none;">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="es">Contacto</h4>
+                <h4 class="en" style="display:none;">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:hola@amarabyg.com">hola@amarabyg.com</a></li>
+                    <li><a href="https://instagram.com/amarabyg" target="_blank">Instagram</a></li>
+                    <li><a href="contacto.html" class="es">Formulario</a><a href="contacto.html" class="en" style="display:none;">Form</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Amara by G — All rights reserved.</p>
+            <p class="es">Diseñado con alma</p>
+            <p class="en" style="display:none;">Designed with soul</p>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const esElements = document.querySelectorAll('.es');
+            const enElements = document.querySelectorAll('.en');
+            if (lang === 'es') {
+                esElements.forEach(el => el.style.display = (el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'BUTTON') ? 'inline-block' : 'block');
+                enElements.forEach(el => el.style.display = 'none');
+            } else {
+                esElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = (el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'BUTTON') ? 'inline-block' : 'block');
+            }
+            localStorage.setItem('pref-lang', lang);
+        }
+        document.querySelectorAll('section').forEach(section => section.classList.add('visible'));
+        const savedLang = localStorage.getItem('pref-lang') || 'es';
+        setLanguage(savedLang);
+    </script>
+</body>
+</html>

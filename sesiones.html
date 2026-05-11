@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesiones – Amara by G</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="img/AmarabyG.png" alt="Amara by G"></a>
+        <div class="nav-links">
+            <a href="index.html" class="es">Inicio</a><a href="index.html" class="en" style="display:none;">Home</a>
+            <a href="sobre-mi.html" class="es">Sobre Mí</a><a href="sobre-mi.html" class="en" style="display:none;">About</a>
+            <a href="servicios.html" class="es">Servicios</a><a href="servicios.html" class="en" style="display:none;">Services</a>
+            <a href="sesiones.html" class="es active">Sesiones</a><a href="sesiones.html" class="en active" style="display:none;">Sessions</a>
+            <a href="testimonios.html" class="es">Testimonios</a><a href="testimonios.html" class="en" style="display:none;">Testimonials</a>
+            <a href="contacto.html" class="es">Contacto</a><a href="contacto.html" class="en" style="display:none;">Contact</a>
+        </div>
+        <div id="language-switch-nav">
+            <button onclick="setLanguage('es')">ES</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+    </nav>
+
+    <header class="hero bg-image" style="background-image: url('img/fondo-sesiones.png');">
+        <div class="hero-box">
+            <h1 class="es">Sesiones Sagradas</h1>
+            <h1 class="en" style="display:none;">Sacred Sessions</h1>
+            <p class="es">Un espacio de transformación profunda</p>
+            <p class="en" style="display:none;">A space for deep transformation</p>
+        </div>
+    </header>
+
+    <section id="ceremonies">
+        <h2 class="es">Rituales Guiados</h2>
+        <h2 class="en" style="display:none;">Guided Rituals</h2>
+        <p class="es" style="text-align: center; font-style: italic;">"Cada ceremonia es un espacio sagrado donde te permites sentir, soltar y reconectar contigo".</p>
+        <p class="en" style="display:none; text-align: center; font-style: italic;">"Each ceremony is a sacred space where you allow yourself to feel, let go, and reconnect with yourself."</p>
+        <div class="grid">
+            <!-- Ritual de Fuego -->
+            <div class="card">
+                <img src="img/ritual-fuego.png" alt="Ritual de Fuego">
+                <h3 class="es">🔥 Ritual de Fuego</h3>
+                <h3 class="en" style="display:none;">🔥 Fire Ritual</h3>
+                <p class="es"><strong>Propósito:</strong> Espacio de transmutación para soltar cargas emocionales y cerrar ciclos.</p>
+                <p class="en" style="display:none;"><strong>Purpose:</strong> A transmutation space to let go of emotional burdens and close cycles.</p>
+            </div>
+            <!-- Ritual de Agua -->
+            <div class="card">
+                <img src="img/ritual-agua.png" alt="Ritual de Agua">
+                <h3 class="es">💧 Ritual de Agua</h3>
+                <h3 class="en" style="display:none;">💧 Water Ritual</h3>
+                <p class="es"><strong>Propósito:</strong> Proceso de limpieza emocional y energética para que la energía fluya con ligereza.</p>
+                <p class="en" style="display:none;"><strong>Purpose:</strong> A process of emotional and energetic cleansing so that energy flows with lightness.</p>
+            </div>
+            <!-- Ritual de Luna -->
+            <div class="card">
+                <img src="img/ritual-luna.png" alt="Ritual de Luna">
+                <h3 class="es">🌙 Ritual de Luna</h3>
+                <h3 class="en" style="display:none;">🌙 Moon Ritual</h3>
+                <p class="es"><strong>Propósito:</strong> Enfocado en la intuición, los ciclos emocionales y la introspección profunda.</p>
+                <p class="en" style="display:none;"><strong>Purpose:</strong> Focused on intuition, emotional cycles, and deep introspection.</p>
+            </div>
+            <!-- Ritual de Cacao -->
+            <div class="card">
+                <img src="img/ritual-cacao.png" alt="Ritual de Cacao">
+                <h3 class="es">☕ Ritual de Cacao</h3>
+                <h3 class="en" style="display:none;">☕ Cacao Ritual</h3>
+                <p class="es"><strong>Propósito:</strong> Apertura del corazón y reconocimiento de lo que habita en el interior.</p>
+                <p class="en" style="display:none;"><strong>Purpose:</strong> Heart opening and recognition of what dwells within.</p>
+            </div>
+            <!-- Ritual de Cristales -->
+            <div class="card">
+                <img src="img/ritual-cristales.png" alt="Ritual de Cristales">
+                <h3 class="es">💎 Ritual de Cristales</h3>
+                <h3 class="en" style="display:none;">💎 Crystal Ritual</h3>
+                <p class="es"><strong>Propósito:</strong> Armonización energética y equilibrio interno mediante el uso de cuarzos.</p>
+                <p class="en" style="display:none;"><strong>Purpose:</strong> Energetic harmonization and internal balance through the use of quartz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sessions-detail">
+        <div class="grid">
+            <div class="card">
+                <img src="img/rituales.png" alt="Detalles de la Sesión">
+                <h3 class="es">💎 Detalles de la Sesión</h3>
+                <h3 class="en" style="display:none;">💎 Session Details</h3>
+                <ul class="es">
+                    <li><strong>Duración:</strong> 60–90 minutos</li>
+                    <li><strong>Idiomas:</strong> Español / English</li>
+                    <li><strong>Modalidad:</strong> Virtual (Zoom/WhatsApp) o Presencial (Kentucky, USA)</li>
+                </ul>
+                <ul class="en" style="display:none;">
+                    <li><strong>Duration:</strong> 60–90 minutes</li>
+                    <li><strong>Languages:</strong> Spanish / English</li>
+                    <li><strong>Format:</strong> Virtual (Zoom/WhatsApp) or In-Person (Kentucky, USA)</li>
+                </ul>
+                <p class="es">Cada encuentro es único: una experiencia de conexión, presencia y equilibrio. No importa la distancia — la energía siempre encuentra el camino.</p>
+                <p class="en" style="display:none;">Each encounter is unique: an experience of connection, presence, and balance. No matter the distance — energy always finds its way.</p>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="contacto.html" class="boton es">Agendar sesión ahora</a>
+                    <a href="contacto.html" class="boton en" style="display:none;">Book session now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><img src="img/AmarabyG.png" alt="Amara by G"></a>
+                <p class="es">Donde la calma se vuelve energía. Un espacio para tu sanación profunda y equilibrio espiritual.</p>
+                <p class="en" style="display:none;">Where calm becomes energy. A space for your deep healing and spiritual balance.</p>
+            </div>
+            <div class="footer-column">
+                <h4 class="es">Explorar</h4>
+                <h4 class="en" style="display:none;">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="sobre-mi.html" class="es">Sobre Mí</a><a href="sobre-mi.html" class="en" style="display:none;">About Me</a></li>
+                    <li><a href="servicios.html" class="es">Servicios</a><a href="servicios.html" class="en" style="display:none;">Services</a></li>
+                    <li><a href="sesiones.html" class="es">Sesiones</a><a href="sesiones.html" class="en" style="display:none;">Sessions</a></li>
+                    <li><a href="testimonios.html" class="es">Testimonios</a><a href="testimonios.html" class="en" style="display:none;">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="es">Contacto</h4>
+                <h4 class="en" style="display:none;">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:hola@amarabyg.com">hola@amarabyg.com</a></li>
+                    <li><a href="https://instagram.com/amarabyg" target="_blank">Instagram</a></li>
+                    <li><a href="contacto.html" class="es">Formulario</a><a href="contacto.html" class="en" style="display:none;">Form</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Amara by G — All rights reserved.</p>
+            <p class="es">Diseñado con alma</p>
+            <p class="en" style="display:none;">Designed with soul</p>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const esElements = document.querySelectorAll('.es');
+            const enElements = document.querySelectorAll('.en');
+            if (lang === 'es') {
+                esElements.forEach(el => el.style.display = (el.tagName === 'A' || el.tagName === 'SPAN') ? 'inline-block' : 'block');
+                enElements.forEach(el => el.style.display = 'none');
+            } else {
+                esElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = (el.tagName === 'A' || el.tagName === 'SPAN') ? 'inline-block' : 'block');
+            }
+            localStorage.setItem('pref-lang', lang);
+        }
+        document.querySelectorAll('section').forEach(section => section.classList.add('visible'));
+        const savedLang = localStorage.getItem('pref-lang') || 'es';
+        setLanguage(savedLang);
+    </script>
+</body>
+</html>
