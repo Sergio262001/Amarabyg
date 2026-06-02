@@ -661,6 +661,29 @@ footer {
     transition: all 0.3s;
 }
 
+/* --- Floating WhatsApp Button --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--dorado-acento);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: var(--texto-oscuro);
+}
+
 /* --- Responsive --- */
 @media (max-width: 1000px) {
     .split-content { flex-direction: column; gap: 50px; }
