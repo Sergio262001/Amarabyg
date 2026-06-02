@@ -505,6 +505,141 @@ footer {
     border: none;
 }
 
+/* --- Home Hero New Design --- */
+.home-hero {
+    padding: 180px 20px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url('img/fondo-naturaleza.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: var(--blanco-perla);
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2em, 5vw, 3.8em);
+    color: var(--dorado-acento);
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+
+.hero-divider span:not(.icon) {
+    height: 1px;
+    width: 60px;
+    background-color: var(--dorado-acento);
+}
+
+.hero-divider .icon {
+    color: var(--dorado-acento);
+    font-size: 1.8em;
+}
+
+.home-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.home-card {
+    background: white;
+    border-radius: 20px;
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(166, 139, 91, 0.08);
+    transition: transform 0.4s ease;
+    border: 1px solid var(--dorado-suave);
+    overflow: hidden;
+}
+
+.home-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(166, 139, 91, 0.15);
+}
+
+.home-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 25px;
+}
+
+.home-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: var(--dorado-acento);
+    margin: 0 20px 10px;
+    font-weight: 500;
+}
+
+.card-icon {
+    font-size: 1.5em;
+    color: var(--dorado-acento);
+    margin: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.card-icon::before, .card-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: var(--dorado-acento);
+}
+
+.card-icon::before { left: -45px; }
+.card-icon::after { right: -45px; }
+
+.home-card p {
+    color: var(--texto-suave);
+    font-size: 1.05em;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.home-card a {
+    color: var(--dorado-acento);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.1em;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.home-card a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--dorado-acento);
+    transition: width 0.3s;
+}
+
+.home-card a:hover::after {
+    width: 0;
+}
+
 /* --- Responsive --- */
 @media (max-width: 1000px) {
     .split-content { flex-direction: column; gap: 50px; }
@@ -512,4 +647,5 @@ footer {
     nav { padding: 20px 30px; }
     .nav-links { display: none; }
     .video-grid { grid-template-columns: 1fr; }
+    .home-cards-grid { grid-template-columns: 1fr; }
 }
