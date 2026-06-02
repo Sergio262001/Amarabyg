@@ -640,12 +640,87 @@ footer {
     width: 0;
 }
 
+/* --- Hamburger Menu --- */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-btn span {
+    width: 30px;
+    height: 3px;
+    background: var(--dorado-acento);
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
 /* --- Responsive --- */
 @media (max-width: 1000px) {
     .split-content { flex-direction: column; gap: 50px; }
     h2 { font-size: 2.8em; }
-    nav { padding: 20px 30px; }
-    .nav-links { display: none; }
+    nav { padding: 15px 25px; flex-wrap: wrap; }
+    
+    .hamburger-btn {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        top: 35px;
+    }
+
+    #language-switch-nav {
+        position: absolute;
+        right: 80px;
+        top: 32px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: white;
+        margin-top: 10px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        max-height: 500px;
+    }
+
+    .nav-links a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--beige-calido);
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-links a::after {
+        display: none;
+    }
+
+    /* Hamburger Animation */
+    .menu-toggle:checked ~ .hamburger-btn span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle:checked ~ .hamburger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .hamburger-btn span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
     .video-grid { grid-template-columns: 1fr; }
     .home-cards-grid { grid-template-columns: 1fr; }
 }
