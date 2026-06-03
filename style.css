@@ -38,10 +38,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background-image: url('img/nav-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-color: white;
+    background: white;
     border-bottom: 2px solid var(--dorado-acento);
     transition: all 0.4s ease;
 }
