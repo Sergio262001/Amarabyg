@@ -40,7 +40,7 @@ nav {
     z-index: 1000;
     background-image: url('img/nav-bg.png');
     background-size: cover;
-    background-position: center;
+    background-position: center top; /* Prueba valores como 'center bottom', 'center 20%', 'center 50px' etc. */
     background-color: white;
     border-bottom: 2px solid var(--dorado-acento);
     transition: all 0.4s ease;
