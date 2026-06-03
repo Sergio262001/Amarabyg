@@ -40,7 +40,7 @@ nav {
     z-index: 1000;
     background-image: url('img/nav-bg.png');
     background-size: cover;
-    background-position: center 35%; /* Mueve el encuadre para mostrar la mancha más abajo */
+    background-position: center;
     background-color: white;
     border-bottom: 2px solid var(--dorado-acento);
     transition: all 0.4s ease;
