@@ -40,7 +40,7 @@ nav {
     z-index: 1000;
     background-image: url('img/nav-bg.png');
     background-size: cover;
-    background-position: center top; /* Prueba valores como 'center bottom', 'center 20%', 'center 50px' etc. */
+    background-position: center 35%; /* Mueve el encuadre para mostrar la mancha más abajo */
     background-color: white;
     border-bottom: 2px solid var(--dorado-acento);
     transition: all 0.4s ease;
@@ -71,11 +71,12 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: var(--texto-oscuro);
-    font-weight: 400;
+    font-weight: 600;
     font-size: 0.95em;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    transition: all 0.3s;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que "SOBRE MÍ" se rompa en dos líneas */
     position: relative;
     padding: 5px 0;
 }
