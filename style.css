@@ -54,10 +54,16 @@ nav::before {
     width: 100%;
     height: 100%;
     background-image: url('img/nav-bg.png');
-    /* 1. Ajustamos el tamaño para que cubra el espacio de forma segura */
+
+    /* 1. Mantiene la proporción bonita sin deformar las hojas */
     background-size: cover;
-    /* 2. La centramos para asegurarnos de que sea visible */
+
+    /* 2. Lo centra para repartir las hojas a ambos lados */
     background-position: center;
+
+    /* 3. ¡LA CLAVE! Evita que la imagen cree esos bordes rectos extraños */
+    background-repeat: no-repeat;
+
     opacity: 0.5;
     z-index: -1;
 }
